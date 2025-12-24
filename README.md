@@ -1,17 +1,84 @@
-# React + Vite
+# LifeMD Mini Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React landing page for LifeMD featuring a testimonial marquee, built with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 High-fidelity design matching LifeMD brand
+- ♿ Fully accessible (WCAG 2.1 Level AA)
+- 📱 Responsive design
+- 🎭 Smooth animations and transitions
+- ♾️ Infinite scrolling testimonial marquee
 
-## React Compiler
+## Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start dev server
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# lifemd-mini-project
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Deployment to GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages.
+
+### Setup Instructions
+
+1. **Update the base path** in `vite.config.js` (line 12):
+   - If your repo is `username.github.io` (root domain): Change `base: '/lifemd-mini-project/'` to `base: '/'`
+   - If your repo is a project page: Replace `lifemd-mini-project` with your actual repository name
+   - Example: If your repo is `my-awesome-project`, use `base: '/my-awesome-project/'`
+
+2. **Enable GitHub Pages**:
+   - Go to your repository Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+3. **Push to main branch**:
+   - The GitHub Actions workflow will automatically build and deploy your site
+   - Check the "Actions" tab to see deployment progress
+
+4. **Your site will be available at**:
+   - Root domain: `https://username.github.io`
+   - Project page: `https://username.github.io/repository-name/`
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+```bash
+# Build the project
+npm run build
+
+# The dist folder contains the built files
+# You can deploy the contents of dist/ to any static hosting service
+```
+
+## Project Structure
+
+```
+├── src/
+│   ├── app.jsx          # Main application component
+│   ├── main.jsx         # React entry point
+│   └── styles/
+│       ├── app.css      # Component styles and animations
+│       └── index.css    # Global styles
+├── public/              # Static assets
+└── .github/
+    └── workflows/
+        └── deploy.yml   # GitHub Actions deployment workflow
+```
+
+## Technologies
+
+- React 19
+- Vite 7
+- Tailwind CSS 4
+- GitHub Pages
