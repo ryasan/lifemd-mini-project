@@ -1,0 +1,25 @@
+# Cursor Rules for LifeMD Mini Project
+
+## General Guidelines
+
+- Provide helpful suggestions and assistance for all file types, including markdown files
+- When working with markdown files, help with formatting, structure, and content organization
+- Maintain consistency with project conventions and coding standards
+
+## File Type Support
+
+- Enable AI suggestions for: .js, .jsx, .ts, .tsx, .css, .md, .json, .html
+- Provide context-aware suggestions based on file type and project structure
+
+## Code Style
+
+- Use modern React patterns (functional components, hooks)
+- Follow Tailwind CSS conventions
+- Use semantic HTML and accessibility best practices
+- Prefer inline styles when Tailwind classes don't work as expected
+
+## Project Context
+
+- This is a LifeMD marketing landing page with a testimonial marquee
+- Focus on accessibility, SEO, and user experience
+- Maintain the high-fidelity design aesthetic
