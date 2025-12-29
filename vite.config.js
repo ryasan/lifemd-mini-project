@@ -1,3 +1,4 @@
+import { BASE_URL } from './src/constants';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
@@ -9,5 +10,5 @@ export default defineConfig({
   // Update '/lifemd-mini-project/' with your actual repository name
   // For root domain (username.github.io): base: '/'
   // For project pages: base: '/repository-name/'
-  base: '/lifemd-mini-project/',
+  base: BASE_URL,
 });

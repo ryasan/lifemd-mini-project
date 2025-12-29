@@ -1,0 +1,72 @@
+/* Statistics Page Styles */
+
+@keyframes bounceSlow {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.animate-bounce-slow {
+	animation: bounceSlow 3s ease-in-out infinite;
+}
+
+@keyframes drawCheck {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+.animate-draw-check {
+	animation: drawCheck 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards 0.5s;
+}
+
+@keyframes cardFadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+	
+.animate-fade-in-up {
+	animation: cardFadeInUp 0.7s ease-out forwards;
+	opacity: 0;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animate-fade-in {
+	animation: fadeIn 0.8s ease-out forwards;
+	opacity: 0;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.animate-bounce-slow,
+	.animate-draw-check,
+	.animate-fade-in-up {
+		animation: none;
+	}
+	
+	.animate-fade-in-up {
+		opacity: 1;
+	}
+	
+	.animate-fade-in {
+		animation: fadeIn 0.3s ease-out forwards;
+	}
+}

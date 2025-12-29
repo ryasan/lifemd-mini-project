@@ -1,8 +1,4 @@
-@import 'tailwindcss';
-
-@theme {
-	--font-sans: 'Inter', sans-serif;
-}
+/* Testimonial Page Styles */
 
 @keyframes scroll {
 	0% {
@@ -32,22 +28,32 @@
 	}
 }
 
-.animate-intro-1 {
+.staggered-intro-1 {
 	animation: fadeInUp 0.6s ease-out forwards;
 	opacity: 0;
 }
 
-.animate-intro-2 {
+.staggered-intro-2 {
 	animation: fadeInUp 0.6s ease-out 0.2s forwards;
 	opacity: 0;
 }
 
-.animate-intro-3 {
+.staggered-intro-3 {
 	animation: fadeInUp 0.6s ease-out 0.4s forwards;
 	opacity: 0;
 }
 
-.animate-intro-4 {
+.staggered-intro-4 {
 	animation: fadeInUp 0.6s ease-out 0.6s forwards;
 	opacity: 0;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.animate-staggered-intro-1,
+	.animate-staggered-intro-2,
+	.animate-staggered-intro-3,
+	.animate-staggered-intro-4 {
+		animation: none;
+	}
 }
