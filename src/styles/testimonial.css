@@ -20,7 +20,7 @@
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
-		transform: translateY(20px);
+		transform: translateY(15px);
 	}
 	to {
 		opacity: 1;
@@ -28,32 +28,30 @@
 	}
 }
 
-.staggered-intro-1 {
-	animation: fadeInUp 0.6s ease-out forwards;
+.animate-fade-in {
+	animation: fadeInUp 0.8s ease-out forwards;
 	opacity: 0;
 }
 
-.staggered-intro-2 {
-	animation: fadeInUp 0.6s ease-out 0.2s forwards;
-	opacity: 0;
+.delay-1 {
+	animation-delay: 0.2s;
 }
 
-.staggered-intro-3 {
-	animation: fadeInUp 0.6s ease-out 0.4s forwards;
-	opacity: 0;
+.delay-2 {
+	animation-delay: 0.4s;
 }
 
-.staggered-intro-4 {
-	animation: fadeInUp 0.6s ease-out 0.6s forwards;
-	opacity: 0;
+.delay-3 {
+	animation-delay: 0.6s;
+}
+
+.delay-4 {
+	animation-delay: 0.8s;
 }
 
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
-	.animate-staggered-intro-1,
-	.animate-staggered-intro-2,
-	.animate-staggered-intro-3,
-	.animate-staggered-intro-4 {
+	.animate-fade-in {
 		animation: none;
 	}
 }
